@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizzaloom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="logo">🍕 Pizzaloom</div>
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#deals">Deals</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </header>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizzaloom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Crafted for Cravings 🍕</h1>
+        <p>Fresh. Hot. Delivered Fast. Satisfy your hunger with Pizzaloom.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn">See Menu</a>
+          <a href="#order" class="btn btn-outline">Build Your Pizza</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Special Deals Section -->
+<section class="deals" id="deals">
+  <h2>🔥 Special Deals</h2>
+  <p class="deals-subtitle">Choose your flavor – Veg or Non-Veg</p>
+
+  <div class="deals-grid">
+    <!-- Veg Deals -->
+    <div class="deal-card veg">
+      <img src="images/generate me one of the best dark themed Veg Feast Combo pizza photo with coca c.png" alt="Veg Feast Pizza">
+      <div class="deal-info">
+        <h3>Veg Feast Combo</h3>
+        <p>2 Medium Veg Pizzas + Garlic Bread + 2 Drinks</p>
+        <span class="tag">Veg</span>
+      </div>
+    </div>
+
+    <div class="deal-card veg">
+      <img src="images/generate me one of the best dark themed Veg Feast Combo pizza photo in png form.png" alt="Cheese Loaded Pizza">
+      <div class="deal-info">
+        <h3>Cheese Overload</h3>
+        <p>1 Large Cheese Pizza + 2 Choco Lava Cakes</p>
+        <span class="tag">Veg</span>
+      </div>
+    </div>
+
+    <!-- Non-Veg Deals -->
+    <div class="deal-card nonveg">
+      <img src="images/Untitled design.png" alt="Meat Lovers Pizza">
+      <div class="deal-info">
+        <h3>Meat Lovers Box</h3>
+        <p>2 Large Non-Veg Pizzas + Chicken Wings + Pepsi</p>
+        <span class="tag nonveg">Non-Veg</span>
+      </div>
+    </div>
+
+    <div class="deal-card nonveg">
+      <img src="images/Untitled design (1).png" alt="Spicy Chicken Combo">
+      <div class="deal-info">
+        <h3>Spicy Chicken Combo</h3>
+        <p>1 Spicy Chicken Pizza + Nuggets + Soft Drink</p>
+        <span class="tag nonveg">Non-Veg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Build Your Pizza - Pizzaloom</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #f44336;
+    }
+
+    .pizza-builder {
+      max-width: 900px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    .step {
+      margin-bottom: 25px;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      color: #ff9800;
+    }
+
+    select, input[type="checkbox"] {
+      padding: 10px;
+      margin: 5px 0;
+      background: #2c2c2c;
+      border: 1px solid #444;
+      border-radius: 6px;
+      color: #fff;
+      width: 100%;
+    }
+
+    .tabs {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .tab-button {
+      flex: 1;
+      background-color: #2c2c2c;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+
+    .tab-button.active {
+      background-color: #f44336;
+    }
+
+    .toppings-group {
+      display: none;
+    }
+
+    .toppings-group.active {
+      display: block;
+    }
+
+    .toppings-options label {
+      display: block;
+      margin: 6px 0;
+    }
+
+    .summary {
+      background: #2c2c2c;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .summary h4 {
+      margin-bottom: 10px;
+      color: #4caf50;
+    }
+
+    .build-btn, #submitBtn {
+      background-color: #f44336;
+      color: white;
+      padding: 12px 25px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: inline-block;
+    }
+
+    .build-btn:hover, #submitBtn:hover {
+      background-color: #e53935;
+    }
+
+    #submitBtn {
+      background-color: #4caf50;
+      display: none;
+    }
+
+    #submitBtn:hover {
+      background-color: #43a047;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pizza-builder">
+    <h2 class="section-title">🍕 Build Your Pizza</h2>
+
+    <div class="step">
+      <h3>Choose Your Base</h3>
+      <select id="base">
+        <option value="">-- Select Base --</option>
+        <option value="Thin Crust">Thin Crust</option>
+        <option value="Cheese Burst">Cheese Burst</option>
+        <option value="Classic Hand Tossed">Classic Hand Tossed</option>
+      </select>
+    </div>
+
+    <div class="step">
+      <h3>Choose Your Sauce</h3>
+      <select id="sauce">
+        <option value="">-- Select Sauce --</option>
+        <option value="Tomato Basil">Tomato Basil</option>
+        <option value="Spicy Chipotle">Spicy Chipotle</option>
+        <option value="White Garlic">White Garlic</option>
+      </select>
+    </div>
+
+    <div class="step">
+      <h3>Choose Your Cheese</h3>
+      <select id="cheese">
+        <option value="">-- Select Cheese --</option>
+        <option value="Mozzarella">Mozzarella</option>
+        <option value="Cheddar">Cheddar</option>
+        <option value="Double Cheese">Double Cheese</option>
+      </select>
+    </div>
+
+    <div class="step">
+      <h3>Choose Your Toppings</h3>
+      <div class="tabs">
+        <button class="tab-button active" onclick="showTab('veg')">Veg</button>
+        <button class="tab-button" onclick="showTab('nonveg')">Non-Veg</button>
+      </div>
+
+      <div class="toppings-group active" id="veg">
+        <div class="toppings-options">
+          <label><input type="checkbox" value="Onions" class="topping"> Onions</label>
+          <label><input type="checkbox" value="Capsicum" class="topping"> Capsicum</label>
+          <label><input type="checkbox" value="Tomatoes" class="topping"> Tomatoes</label>
+          <label><input type="checkbox" value="Olives" class="topping"> Olives</label>
+          <label><input type="checkbox" value="Jalapenos" class="topping"> Jalapenos</label>
+        </div>
+      </div>
+
+      <div class="toppings-group" id="nonveg">
+        <div class="toppings-options">
+          <label><input type="checkbox" value="Pepperoni" class="topping"> Pepperoni</label>
+          <label><input type="checkbox" value="Chicken Sausage" class="topping"> Chicken Sausage</label>
+          <label><input type="checkbox" value="Grilled Chicken" class="topping"> Grilled Chicken</label>
+          <label><input type="checkbox" value="Bacon" class="topping"> Bacon</label>
+        </div>
+      </div>
+    </div>
+
+    <button class="build-btn" onclick="generateSummary()">Build Pizza</button>
+
+    <div class="summary" id="summary">
+      <h4>Pizza Summary</h4>
+      <p><strong>Base:</strong> <span id="sum-base">-</span></p>
+      <p><strong>Sauce:</strong> <span id="sum-sauce">-</span></p>
+      <p><strong>Cheese:</strong> <span id="sum-cheese">-</span></p>
+      <p><strong>Toppings:</strong> <span id="sum-toppings">-</span></p>
+    </div>
+
+    <button id="submitBtn" onclick="submitPizza()">Submit Order</button>
+  </div>
+
+  <script>
+    function showTab(tabName) {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.toppings-group').forEach(group => group.classList.remove('active'));
+      document.getElementById(tabName).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    function generateSummary() {
+      const base = document.getElementById('base').value;
+      const sauce = document.getElementById('sauce').value;
+      const cheese = document.getElementById('cheese').value;
+
+      const toppings = [];
+      document.querySelectorAll('.topping:checked').forEach(input => {
+        toppings.push(input.value);
+      });
+
+      document.getElementById('sum-base').textContent = base || 'Not Selected';
+      document.getElementById('sum-sauce').textContent = sauce || 'Not Selected';
+      document.getElementById('sum-cheese').textContent = cheese || 'Not Selected';
+      document.getElementById('sum-toppings').textContent = toppings.length ? toppings.join(', ') : 'None';
+
+      // Show the submit button only if all main fields are selected
+      if (base && sauce && cheese) {
+        document.getElementById('submitBtn').style.display = 'inline-block';
+      } else {
+        document.getElementById('submitBtn').style.display = 'none';
+        alert("⚠️ Please select Base, Sauce, and Cheese to proceed.");
+      }
+    }
+
+    function submitPizza() {
+      alert("🎉 Your Pizzaloom order has been submitted! Thank you for choosing us.");
+      // Optional: Reset form or redirect
+    }
+  </script>
+</body>
+</html>
+
+<section id="menu" class="menu-section">
+  <h2 class="section-title">🍕 Our Menu</h2>
+  <div class="menu-tabs">
+    <button class="tab active" data-category="all">All</button>
+    <button class="tab" data-category="classic">Classic Pizzas</button>
+    <button class="tab" data-category="sides">Sides & Dips</button>
+    <button class="tab" data-category="beverages">Beverages</button>
+    <button class="tab" data-category="desserts">Desserts</button>
+  </div>
+
+  <div class="menu-items">
+    <!-- Each category has one item -->
+    <div class="menu-card" data-category="classic">
+      <img src="https://source.unsplash.com/400x300/?pizza" alt="Pepperoni Pizza">
+      <h3>Pepperoni Pizza</h3>
+      <p>Loaded with spicy pepperoni & cheese.</p>
+      <span class="price">₹399</span>
+    </div>
+
+    <div class="menu-card" data-category="sides">
+      <img src="https://source.unsplash.com/400x300/?garlic-bread" alt="Garlic Bread">
+      <h3>Garlic Bread</h3>
+      <p>Cheesy, buttery garlic treat.</p>
+      <span class="price">₹149</span>
+    </div>
+
+    <div class="menu-card" data-category="beverages">
+      <img src="https://source.unsplash.com/400x300/?soft-drink" alt="Coke">
+      <h3>Chilled Coke</h3>
+      <p>Perfect refreshment with your pizza.</p>
+      <span class="price">₹69</span>
+    </div>
+
+    <div class="menu-card" data-category="desserts">
+      <img src="https://source.unsplash.com/400x300/?chocolate-cake" alt="Choco Lava Cake">
+      <h3>Choco Lava Cake</h3>
+      <p>Melting chocolate indulgence.</p>
+      <span class="price">₹129</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🍕 Delivery Checker Section -->
+<section class="location-delivery">
+  <h2>🍕 Select Your Delivery Location</h2>
+  <div class="location-form">
+    <div class="dropdown-group">
+      <label for="state">State:</label>
+      <select id="state">
+        <option value="">-- Select State --</option>
+        <option value="maharashtra">Maharashtra</option>
+        <option value="karnataka">Karnataka</option>
+        <option value="delhi">Delhi</option>
+      </select>
+    </div>
+
+    <div class="dropdown-group">
+      <label for="city">City:</label>
+      <select id="city">
+        <option value="">-- Select City --</option>
+         <optgroup label="Maharashtra">
+    <option value="mumbai">Mumbai</option>
+    <option value="pune">Pune</option>
+    <option value="nagpur">Nagpur</option>
+    <option value="nashik">Nashik</option>
+    <option value="thane">Thane</option>
+  </optgroup>
+  <optgroup label="Karnataka">
+    <option value="bengaluru">Bengaluru</option>
+    <option value="mysuru">Mysuru</option>
+    <option value="hubli">Hubli</option>
+    <option value="mangaluru">Mangaluru</option>
+    <option value="belgaum">Belgaum</option>
+  </optgroup>
+  <optgroup label="Delhi">
+    <option value="new-delhi">New Delhi</option>
+    <option value="dwarka">Dwarka</option>
+    <option value="rohini">Rohini</option>
+    <option value="saket">Saket</option>
+    <option value="karol-bagh">Karol Bagh</option>
+  </optgroup>
+      </select>
+    </div>
+
+    <button id="checkDelivery">Check Delivery</button>
+  </div>
+
+  <div id="deliveryResult" class="delivery-result"></div>
+</section>
+
+<style>
+  .location-delivery {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    background-color: #121212;
+    color: #fff;
+  }
+
+  .location-delivery h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #facc15;
+  }
+
+  .location-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .dropdown-group {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  label {
+    margin-bottom: 6px;
+    text-align: left;
+  }
+
+  select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+
+  button {
+    background-color: #facc15;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #eab308;
+  }
+
+  .delivery-result {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #1f1f1f;
+    border-left: 4px solid #facc15;
+    border-radius: 6px;
+    display: none;
+  }
+</style>
+
+<script>
+  const stateSelect = document.getElementById("state");
+  const citySelect = document.getElementById("city");
+  const deliveryResult = document.getElementById("deliveryResult");
+  const checkBtn = document.getElementById("checkDelivery");
+
+  const stateCityMap = {
+    maharashtra: ["Mumbai", "Pune", "Nagpur", "Nashik", "Thane"],
+    karnataka: ["Bengaluru", "Mysuru", "Hubli", "Mangaluru", "Belgaum"],
+    delhi: ["New Delhi", "Dwarka", "Rohini", "Saket", "Karol Bagh"]
+  };
+
+  stateSelect.addEventListener("change", () => {
+    const selectedState = stateSelect.value;
+    citySelect.innerHTML = `<option value="">-- Select City --</option>`;
+
+    if (selectedState && stateCityMap[selectedState]) {
+      stateCityMap[selectedState].forEach(city => {
+        const option = document.createElement("option");
+        option.value = city.toLowerCase().replace(/\s+/g, '-');
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+      citySelect.disabled = false;
+    } else {
+      citySelect.disabled = true;
+    }
+
+    deliveryResult.style.display = "none";
+  });
+
+  checkBtn.addEventListener("click", () => {
+    const state = stateSelect.options[stateSelect.selectedIndex].text;
+    const city = citySelect.options[citySelect.selectedIndex]?.text;
+
+    if (!stateSelect.value || !citySelect.value) {
+      deliveryResult.innerHTML = `<span style="color: #f87171;">⚠️ Please select both state and city.</span>`;
+    } else {
+      deliveryResult.innerHTML = `
+        ✅ <strong>Delivery Available!</strong><br>
+        Nearest Pizzaloom outlet in <b>${city}, ${state}</b>.<br>
+        Estimated Delivery Time: <b>25–35 mins</b> 🚴‍♂️
+      `;
+    }
+
+    deliveryResult.style.display = "block";
+  });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizzaloom - Customer Reviews</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .testimonial-section {
+      padding: 60px 20px;
+      background-color: #1a1a1a;
+      text-align: center;
+    }
+
+    .testimonial-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #ff4c29;
+    }
+
+    .testimonial-wrapper {
+      position: relative;
+      max-width: 95%;
+      margin: auto;
+    }
+
+    .testimonial-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+
+    .testimonial-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .testimonial-scroll::-webkit-scrollbar-thumb {
+      background-color: #444;
+      border-radius: 10px;
+    }
+
+    .testimonial-card {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 12px;
+      min-width: 280px;
+      max-width: 300px;
+      flex: 0 0 auto;
+      box-shadow: 0 0 10px rgba(255, 76, 41, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .testimonial-card:hover {
+      transform: scale(1.02);
+    }
+
+    .testimonial-card blockquote {
+      font-style: italic;
+      color: #ddd;
+      margin: 15px 0;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .reviewer img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #ff4c29;
+    }
+
+    .reviewer-info h4 {
+      margin: 0;
+      color: #fff;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 1.1rem;
+    }
+
+    .scroll-btns {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .scroll-btns button {
+      background-color: #ff4c29;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .scroll-btns button:hover {
+      background-color: #e63c1f;
+    }
+
+    @media (max-width: 600px) {
+      .testimonial-card {
+        min-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="testimonial-section">
+  <h2>Customer Reviews</h2>
+
+  <div class="testimonial-wrapper">
+    <div class="testimonial-scroll" id="testimonialScroll">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <blockquote>"Absolutely loved the crust! Pizzaloom is my go-to now!"</blockquote>
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/60?img=7" alt="User 1">
+          <div class="reviewer-info">
+            <h4>Ananya</h4>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <blockquote>"Great taste, timely delivery and super-friendly service!"</blockquote>
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/60?img=2" alt="User 2">
+          <div class="reviewer-info">
+            <h4>Rahul</h4>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <blockquote>"The cheese burst pizza is insanely good! 🔥"</blockquote>
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/60?img=5" alt="User 3">
+          <div class="reviewer-info">
+            <h4>Fatima</h4>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card">
+        <blockquote>"Hands down, better than any chain out there!"</blockquote>
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/60?img=10" alt="User 4">
+          <div class="reviewer-info">
+            <h4>Jay</h4>
+            <div class="stars">⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="testimonial-card">
+        <blockquote>"I'm addicted to their garlic cheese pizza. Best in town!"</blockquote>
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/60?img=12" alt="User 5">
+          <div class="reviewer-info">
+            <h4>Sana</h4>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll Buttons -->
+    <div class="scroll-btns">
+      <button onclick="scrollLeft()">⟵</button>
+      <button onclick="scrollRight()">⟶</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const scrollContainer = document.getElementById('testimonialScroll');
+
+  function scrollLeft() {
+    scrollContainer.scrollBy({
+      left: -320,
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollRight() {
+    scrollContainer.scrollBy({
+      left: 320,
+      behavior: 'smooth'
+    });
+  }
+
+  // Optional: Enable scrolling with mouse wheel horizontally
+  scrollContainer.addEventListener("wheel", function(evt) {
+    evt.preventDefault();
+    scrollContainer.scrollBy({
+      left: evt.deltaY < 0 ? -100 : 100
+    });
+  });
+</script>
+
+</body>
+</html>
+
+<!-- Contact & Support Section -->
+<section id="contact-support" class="contact-support">
+  <div class="container">
+    <h2>Contact & Support</h2>
+
+    <!-- Contact Options -->
+    <div class="contact-options">
+      <div class="option-card">
+        <h3>Email Us</h3>
+        <p><a href="mailto:support@pizzaloom.com">support@pizzaloom.com</a></p>
+      </div>
+      <div class="option-card">
+        <h3>Call Us</h3>
+        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+      </div>
+      <div class="option-card">
+        <h3>Live Chat</h3>
+        <p><a href="#">Start Chat</a></p>
+      </div>
+    </div>
+
+    <!-- Contact Form + FAQ -->
+    <div class="form-faq-wrapper">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="faq-section">
+        <h3>Frequently Asked Questions</h3>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">How do I track my pizza order?</button>
+            <div class="accordion-body">You can track your order via the “My Orders” section after login.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">What is your refund policy?</button>
+            <div class="accordion-body">If you receive the wrong or cold pizza, contact us within 24 hours for a full refund.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Can I schedule a delivery?</button>
+            <div class="accordion-body">Yes, just select the delivery time at checkout and we’ll handle the rest.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Store Locator -->
+    <div class="map-section">
+      <h3>Find Our Nearest Store</h3>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902300453345!2d72.83321177531807!3d19.027418684660803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8ebd5e95f13%3A0x96c6a53ed538b202!2sPizza%20Restaurant!5e0!3m2!1sen!2sin!4v1690287752931!5m2!1sen!2sin"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pizzaloom Contact Details -->
+<div class="pizzaloom-contact-info">
+  <h3>📞 Pizzaloom Contact Information</h3>
+  <ul>
+    <li><strong>📍 Address:</strong> 123 Pizza Street, Downtown, Mumbai, India</li>
+    <li><strong>📧 Email:</strong> <a href="mailto:support@pizzaloom.com">support@pizzaloom.com</a></li>
+    <li><strong>📱 Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></li>
+    <li><strong>🕑 Working Hours:</strong> Mon - Sun: 10:00 AM - 11:00 PM</li>
+  </ul>
+</div>
+
+
+<!-- Raise a Complaint Section -->
+<section id="raise-complaint" class="complaint-section">
+  <div class="container">
+    <h2>Raise a Complaint</h2>
+    <p class="complaint-info">We’re sorry you faced an issue. Please fill the form below and our support team will reach out shortly.</p>
+
+    <form class="complaint-form">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <input type="email" name="email" placeholder="Your Email Address" required />
+      <textarea name="message" rows="5" placeholder="Describe your complaint..." required></textarea>
+      <button type="submit">Submit Complaint</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- Existing FAQs -->
+<div class="accordion">
+  <div class="accordion-item">
+    <button class="accordion-header">How do I track my pizza order?</button>
+    <div class="accordion-body">You can track your order via the “My Orders” section after login.</div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-header">What is your refund policy?</button>
+    <div class="accordion-body">If you receive the wrong or cold pizza, contact us within 24 hours for a full refund.</div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-header">Can I schedule a delivery?</button>
+    <div class="accordion-body">Yes, just select the delivery time at checkout and we’ll handle the rest.</div>
+  </div>
+
+  <!-- New FAQs Below -->
+  <div class="accordion-item">
+    <button class="accordion-header">Do you offer contactless delivery?</button>
+    <div class="accordion-body">Yes, choose “Contactless Delivery” at checkout and your order will be left safely at your door.</div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-header">How can I cancel or change my order?</button>
+    <div class="accordion-body">You can cancel or modify your order within 5 minutes of placing it by calling our customer care.</div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-header">Are there any delivery charges?</button>
+    <div class="accordion-body">Orders above ₹299 are delivered free. For smaller orders, a nominal ₹30 delivery fee applies.</div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-header">How do I use a promo code?</button>
+    <div class="accordion-body">During checkout, enter your promo code in the designated field and click “Apply”.</div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-header">Do you offer vegetarian or vegan options?</button>
+    <div class="accordion-body">Yes! We offer a wide variety of vegetarian pizzas and are working on vegan-friendly options.</div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-header">How do I contact customer service?</button>
+    <div class="accordion-body">You can email us at <a href="mailto:support@pizzaloom.com">support@pizzaloom.com</a> or call us at <a href="tel:+919876543210">+91 98765 43210</a>.</div>
+  </div>
+</div>
+
+
+<!-- Store Locator Section -->
+<div class="map-contact-wrapper">
+  <!-- Map -->
+  <div class="map-section">
+    <h3>Find Our Nearest Store</h3>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12..."
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Pizzaloom Contact Info -->
+  <div class="pizzaloom-contact-info">
+    <h3>📞 Pizzaloom Contact Information</h3>
+    <ul>
+      <li><strong>📍 Address:</strong> 123 Pizza Street, Downtown, Mumbai, India</li>
+      <li><strong>📧 Email:</strong> <a href="mailto:support@pizzaloom.com">support@pizzaloom.com</a></li>
+      <li><strong>📱 Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></li>
+      <li><strong>🕑 Working Hours:</strong> Mon - Sun: 10:00 AM - 11:00 PM</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 👇 HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>🍕 Pizzaloom</h2>
+      <p>Crafting cravings, delivering delight!</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#deals">Deals</a></li>
+        <li><a href="#build">Build Pizza</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-app">
+      <h4>Download App</h4>
+      <a href="#"><img src="appstore.png" alt="App Store" /></a>
+      <a href="#"><img src="playstore.png" alt="Play Store" /></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Pizzaloom. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- 👇 Add this in your <head> to load icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
+  <!-- Placeholder Sections -->
+  <section id="home"></section>
+  <section id="menu"></section>
+  <section id="order"></section>
+  <section id="deals"></section>
+  <section id="about"></section>
+  <section id="contact"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
